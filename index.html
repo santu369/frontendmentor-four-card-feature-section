@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Four card feature section</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <base target="_blank" />
 </head>
 <body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+  <main>
+    <header><h1>Reliable, efficient delivery</h1></header>
+    <section class="section">
+      <h2 class="section__title">Powered by Technology</h2>
+      <p class="section__intro">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+      <div class="section__detail">
+        <div class="flex flex-full">
+          <article class="article supervisor">
+            <h3 class="article__title">Supervisor</h3>
+            <p class="article__detail">Monitors activity to identify project roadblocks</p>
+          </article>
+        </div>
+        <div class="flex">
+          <article class="article team-builder">
+            <h3 class="article__title">Team Builder</h3>
+            <p class="article__detail">Scans our talent network to create the optimal team for your project</p>
+          </article>
+          <article class="article karma">
+            <h3 class="article__title">Karma</h3>
+            <p class="article__detail">Regularly evaluates our talent to ensure quality</p>
+          </article>
+        </div>
+        <div class="flex flex-full">
+          <article class="article calculator">
+            <h3 class="article__title">Calculator</h3>
+            <p class="article__detail">Uses data from past projects to provide better delivery estimates</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
