@@ -15,64 +15,129 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fafafa;
   color: #a3a5ae;
+  min-width: 240px;
+}
+@media screen and (min-width: 1120px) {
+  body {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 main {
   margin: 4rem 1.4rem 3.5rem;
+}
+@media screen and (min-width: 1120px) {
+  main {
+    margin: 0;
+    margin: 3rem 0.5rem 0.5rem 0.5rem;
+  }
 }
 main header h1 {
   font-size: 1.2rem;
   font-weight: 200;
   text-align: center;
 }
+@media screen and (min-width: 1120px) {
+  main header h1 {
+    font-size: 1.8rem;
+    color: #4c4e61;
+  }
+}
 main .section__title {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #4c4e61;
+  font-weight: 600;
+}
+@media screen and (min-width: 1120px) {
+  main .section__title {
+    font-size: 1.8rem;
+  }
 }
 main .section__intro {
   text-align: center;
-  margin-bottom: 3.75rem;
+  max-width: 27rem;
+  margin: 0 auto 3.75rem auto;
+}
+@media screen and (min-width: 1120px) {
+  main .section__intro {
+    font-size: 0.8rem;
+    margin: 0 auto 2.75rem auto;
+  }
 }
 main .section__detail {
-  display: block;
+  font-weight: 400;
+}
+@media screen and (min-width: 1120px) {
+  main .section__detail {
+    display: flex;
+    justify-content: space-around;
+    min-width: 882px;
+  }
 }
 main .flex .supervisor {
-  background: url("../images/icon-supervisor.svg") no-repeat 90% 90%;
+  background: white url("../images/icon-supervisor.svg") no-repeat 90% 90%;
 }
 main .flex .supervisor::after {
   background-color: #45d3d3;
 }
 main .flex .team-builder {
-  background: url("../images/icon-team-builder.svg") no-repeat 90% 90%;
+  background: white url("../images/icon-team-builder.svg") no-repeat 90% 90%;
 }
 main .flex .team-builder::after {
-  background-color: #45d3d3;
+  background-color: #ea5353;
 }
 main .flex .karma {
-  background: url("../images/icon-karma.svg") no-repeat 90% 90%;
+  background: white url("../images/icon-karma.svg") no-repeat 90% 90%;
 }
 main .flex .karma::after {
-  background-color: #45d3d3;
+  background-color: #fcaf4a;
 }
 main .flex .calculator {
-  background: url("../images/icon-calculator.svg") no-repeat 90% 90%;
+  background: white url("../images/icon-calculator.svg") no-repeat 90% 90%;
 }
 main .flex .calculator::after {
-  background-color: #45d3d3;
+  background-color: #549ef2;
+}
+@media screen and (min-width: 1120px) {
+  main .flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1120px) {
+  main .flex-full {
+    align-self: center;
+  }
+  main .flex-full .article {
+    margin: 0;
+  }
+  main .flex-full .supervisor {
+    margin-right: 2rem;
+  }
+  main .flex-full .calculator {
+    margin-left: 2rem;
+  }
 }
 main .article {
   width: 100%;
   height: 11rem;
   min-width: 160px;
-  min-height: 9rem;
-  padding: 28px;
+  min-height: 5rem;
+  padding: 26px;
   margin-bottom: 25px;
   border-radius: 0.5rem;
-  background-color: white;
   box-shadow: 0px 10px 29px -5px #a3a5ae;
   position: relative;
+}
+@media screen and (min-width: 1120px) {
+  main .article {
+    max-width: 348px;
+  }
 }
 main .article::after {
   position: absolute;
@@ -87,9 +152,33 @@ main .article__title {
   color: #4c4e61;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 1120px) {
+  main .article__title {
+    font-size: 1rem;
+  }
 }
 main .article__detail {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
+}
+
+/* footer */
+.attribution {
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  color: #a3a5ae;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.attribution a {
+  text-decoration: none;
+  color: #4c4e61;
+  font-weight: 600;
+}
+.attribution a:hover {
+  color: #549ef2;
 }
 
 /*# sourceMappingURL=style.css.map */
