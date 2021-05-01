@@ -154,6 +154,7 @@ main .article__detail {
     flex-direction: column;
     gap: 0;
     flex: 1;
+    align-content: center;
   }
   main .flex .team-builder {
     margin-bottom: 2rem;
