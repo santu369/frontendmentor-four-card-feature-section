@@ -11,6 +11,8 @@ $neu-dark-blue: hsl(234, 12%, 34%);
 $neu-gray-blue: hsl(229, 6%, 66%);
 $neu-light-gray: hsl(0, 0%, 98%);
 
+$dark-gray: hsl(0, 0%, 27%);
+$gray: hsl(0, 0%, 40%);
 $white: hsl(0, 0%, 100%);
 
 $font-size: 15px;
@@ -25,7 +27,8 @@ $team-builder-icon: "../images/icon-team-builder.svg";
 $karma-icon: "../images/icon-karma.svg";
 $calculator-icon: "../images/icon-calculator.svg";
 
-$breakpoint: 1120px;
+$breakpoint: 1170px;
+// $breakpoint: 835px;
 // $breakpoint: 968px;
 
 /* default */
@@ -41,7 +44,7 @@ $breakpoint: 1120px;
 /* mixins */
 
 @mixin article-extra($url, $background-color) {
-  background: $white url($url) no-repeat 90% 90%;
+  background: $white url($url) no-repeat 90% 80%;
   &::after {
     background-color: $background-color;
   }
@@ -53,61 +56,40 @@ body {
   background-color: $neu-light-gray;
   color: $neu-gray-blue;
   min-width: 240px;
-  @media screen and (min-width: $breakpoint) {
-    font-size: $font-size-large;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 main {
   margin: 4rem 1.4rem 3.5rem;
-  @media screen and (min-width: $breakpoint) {
-    margin: 0;
-    margin: 3rem 0.5rem 0.5rem 0.5rem;
-  }
   header {
     h1 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: $font-light;
       text-align: center;
-      @media screen and (min-width: $breakpoint) {
-        font-size: 1.8rem;
-        color: $neu-dark-blue;
-      }
     }
   }
   .section {
     &__title {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
       color: $neu-dark-blue;
       font-weight: $font-bold;
-      @media screen and (min-width: $breakpoint) {
-        font-size: 1.8rem;
-      }
     }
     &__intro {
+      font-size: 1rem;
       text-align: center;
       max-width: 27rem;
       margin: 0 auto 3.75rem auto;
-      @media screen and (min-width: $breakpoint) {
-        font-size: 0.8rem;
-        margin: 0 auto 2.75rem auto;
-      }
     }
     &__detail {
       font-weight: $font-medium;
-      @media screen and (min-width: $breakpoint) {
-        display: flex;
-        justify-content: space-around;
-        min-width: 882px;
-      }
     }
   }
   .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
     .supervisor {
       @include article-extra($supervisor-icon, $prim-cyan);
     }
@@ -120,38 +102,17 @@ main {
     .calculator {
       @include article-extra($calculator-icon, $prim-blue);
     }
-    @media screen and (min-width: $breakpoint) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  @media screen and (min-width: $breakpoint) {
-    .flex-full {
-      align-self: center;
-      .article {
-        margin: 0;
-      }
-      .supervisor {
-        margin-right: 2rem;
-      }
-      .calculator {
-        margin-left: 2rem;
-      }
-    }
   }
   .article {
     width: 100%;
-    height: 11rem;
+    min-height: 220px;
     min-width: 160px;
-    min-height: 5rem;
-    padding: 26px;
-    margin-bottom: 25px;
+    max-width: 363px;
+    padding: 1.6rem;
+    margin-bottom: 1.25rem;
     border-radius: 0.5rem;
     box-shadow: 0px 10px 29px -5px $neu-gray-blue;
     position: relative;
-    @media screen and (min-width: $breakpoint) {
-      max-width: 348px;
-    }
     &::after {
       position: absolute;
       content: "";
@@ -163,35 +124,97 @@ main {
     }
     &__title {
       color: $neu-dark-blue;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 0.5rem;
       font-weight: $font-bold;
-      @media screen and (min-width: $breakpoint) {
-        font-size: 1rem;
-      }
     }
     &__detail {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
 }
 
 /* footer */
 .attribution {
-  // position: absolute;
-  // bottom: -5rem;
   font-size: 0.75rem;
   line-height: 20px;
   text-align: center;
-  color: $neu-gray-blue;
-  margin-bottom: 10px;
+  color: $gray;
+  margin-top: 1rem;
   font-weight: $font-medium;
   a {
     text-decoration: none;
-    color: $neu-dark-blue;
+    color: $gray;
     font-weight: $font-bold;
     &:hover {
-      color: $prim-blue;
+      color: $dark-gray;
+    }
+  }
+}
+
+/* media queries */
+
+@media screen and (min-width: $breakpoint) {
+  body {
+    font-size: $font-size-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    margin: 3rem 0.5rem 0.5rem 0.5rem;
+    header {
+      h1 {
+        font-size: 2.5rem;
+        color: $neu-dark-blue;
+      }
+    }
+    .section {
+      &__title {
+        font-size: 2.5rem;
+      }
+      &__intro {
+        font-size: 1rem;
+        margin: 0 auto 4rem auto;
+        max-width: 35rem;
+      }
+      &__detail {
+        display: flex;
+        justify-content: space-around;
+        min-width: 882px;
+      }
+    }
+    .flex {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      flex: 1;
+      .team-builder {
+        margin-bottom: 2rem;
+      }
+    }
+    .flex-full {
+      align-self: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      .article {
+        margin: 0;
+      }
+      .supervisor {
+        margin-right: 2rem;
+      }
+
+      .calculator {
+        margin-left: 2rem;
+      }
+    }
+    .article {
+      max-width: 350px;
+      min-height: 250px;
+      padding: 2rem;
+      &__title {
+        font-size: 1.25rem;
+      }
     }
   }
 }
